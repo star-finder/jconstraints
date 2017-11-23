@@ -822,6 +822,25 @@ public abstract class BuiltinTypes {
       throw new ClassCastException();
     }
   }
+  
+  public static final class GenericReferenceType extends ConcreteType<Object> {
+
+	public GenericReferenceType() {
+		super("ref", Object.class, null, null, new String[]{"reference"}, Object.class);
+	}
+
+	@Override
+	public Object cast(Object other) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object parse(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+  }
 
   public static final BoolType BOOL = new BoolType();
   public static final BigDecimalType DECIMAL = new BigDecimalType();
@@ -833,6 +852,7 @@ public abstract class BuiltinTypes {
   public static final SInt16Type SINT16 = new SInt16Type();
   public static final UInt16Type UINT16 = new UInt16Type(); 
   public static final SInt8Type SINT8 = new SInt8Type();
+  public static final GenericReferenceType REF = new GenericReferenceType();
   
   static final Type<?>[] BUILTIN_TYPES = new Type<?>[]{
     BOOL,
@@ -844,7 +864,8 @@ public abstract class BuiltinTypes {
     SINT32,
     SINT16,
     UINT16,
-    SINT8
+    SINT8,
+    REF
   };
 
   private BuiltinTypes() {}
