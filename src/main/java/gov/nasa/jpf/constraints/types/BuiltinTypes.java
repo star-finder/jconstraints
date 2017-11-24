@@ -826,7 +826,7 @@ public abstract class BuiltinTypes {
   public static final class GenericReferenceType extends ConcreteType<Object> {
 
 	public GenericReferenceType() {
-		super("ref", Object.class, null, null, new String[]{"reference"}, Object.class);
+		super("ref", Object.class, 0, null, new String[]{"reference"}, Object.class);
 	}
 
 	@Override
