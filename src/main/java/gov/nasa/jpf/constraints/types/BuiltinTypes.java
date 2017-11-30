@@ -832,7 +832,7 @@ public abstract class BuiltinTypes {
 	@Override
 	public Object cast(Object other) {
 		// TODO Auto-generated method stub
-		return null;
+		return other;
 	}
 
 	@Override
